@@ -1,0 +1,10 @@
+<h1> <%= @gossip.anonymous_author %> </h1>
+
+<p> <%= @gossip.content %></p>
+
+</br>
+
+<p>
+	<a href="<%=gossips_path%>" class='btn btn-primary'>Retour à la liste</a>
+	<a href="<%=edit_gossip_path%>" class='btn btn-default'>Modifier ce gossip</a>
+</p>

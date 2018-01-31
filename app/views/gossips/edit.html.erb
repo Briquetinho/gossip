@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="http://cdn.rawgit.com/yegor256/tacit/gh-pages/tacit-css-1.2.8.min.css"/>
+<h1>Edition du gossip</h1>
+<br/>
+<%= form_for @gossip do |g| %>
+	<div class='form-group'>
+		<label>Autheur</label>
+		<%= g.text_field :anonymous_author, class: 'form-control' %>
+	</div>
+	<div class='form-group'>
+		<label>Contenu du gossip</label>
+		<%= g.text_field :content, class: 'form-control' %>
+	</div>
+	<br/>
+	<div class='form-group'>
+		<button type='submit' class='btn btn-primary'>Editer le gossip</button>
+		
+	</div>
+	<div class='form-group'>
+		<a href='<%= gossip_path(@gossip.id) %>' class='btn btn-danger' data-confirm='Etes vous sur?' data-method='DELETE'>Supprimer</a>
+	</div>
+<%end%>

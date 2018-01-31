@@ -1,0 +1,17 @@
+<h1> Balance ton dossier mon pote  <i class="em em-face_with_finger_covering_closed_lips"></i></h1> 
+<%= form_for @gossip do |g| %>
+	<div class="form-group">
+		<label>Auteur Anonyme</label>
+		<%= g.text_field :anonymous_author, class:'form-control' %>
+	</div>
+	<div class="form-group">
+		<label>Ce que tu as à raconter</label>
+		<%= g.text_field :content ,class:'form-control' %>
+	</div>
+	<div class="form-group">
+		<button type='submit' class='btn btn-primary'>Poster le gossip</button>
+	</div>
+<% end %>
+<br/> <br/> 
+<p><a href="<%=gossips_path%>" class='btn btn-primary'>Retour à la liste</a></p>
+

@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="http://cdn.rawgit.com/yegor256/tacit/gh-pages/tacit-css-1.2.8.min.css"/>
+<h1> Voici la liste des gossips ! </h1>
+
+<% @gossips.each do |gossip| %>
+<h2><%= gossip.anonymous_author %> </h2>
+<p><%= gossip.content %> </p>
+<p>
+		<a href='<%= gossip_path(gossip.id) %>' class='btn btn-primary'>Lire la suite</a>
+		<a href='<%= edit_gossip_path(gossip.id) %>' class='btn btn-warning'>Editer</a>
+		<a href='<%= gossip_path(gossip.id) %>' class='btn btn-danger' data-confirm='Etes vous sur?' data-method='DELETE'>Supprimer</a>
+</p> 
+<% end %>
+<br/>
+<p> <a href='<%= new_gossip_path %>' class='btn btn-primary'>Créer un nouveau gossip</a> </p>
